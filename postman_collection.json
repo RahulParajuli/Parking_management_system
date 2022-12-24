@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Rahul Parajuli\",\n    \"license_plate\": \"ABC-12\",\n    \"booking_for\": \"1st Jan 2023\"\n}",
+					"raw": "{\n    \"name\": \"Alice\",\n    \"license_plate\": \"ABC-12\",\n    \"booking_for\": \"1st feb 2023\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,7 +37,17 @@
 			"name": "Get all the booking details",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/booking",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"booking"
+					]
+				}
 			},
 			"response": []
 		},
@@ -45,15 +55,45 @@
 			"name": "Get all the booked bays list",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/bookedbays",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"bookedbays"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Get booking list by date",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\" : \"2022-12-25\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/date/bookinglist",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"date",
+						"bookinglist"
+					]
+				}
 			},
 			"response": []
 		},
