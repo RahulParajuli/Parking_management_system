@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from customers import views
-from booking import views
+from Carpark import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('customer/', views.Customerslist.as_view()),
-    path('booking', views.Bookinglist.as_view()),
-
+    path('admin/', admin.site.urls), #access admin panel - ID = rahul, password = rahul
+    path('booking', views.Bookinglist.as_view()), #get booking list and make booking
+    path('parkbay', views.Parkbaylist.as_view()), #get parkbay list
+    path('bookedbays', views.AllBookedBaylist.as_view()), #get all booked bays
+    path('availablebaylist', views.AllAvailableBaylist.as_view()), #get all available bays
+    path('date/bookinglist', views.BookedBayList.as_view()), #get all booked bays for a date
+    path("bookinglist/<str:date>/", views.BookedBayDates.as_view()), #get all booked bays for a date
 ]
