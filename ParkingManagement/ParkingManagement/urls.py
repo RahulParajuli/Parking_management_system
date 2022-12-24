@@ -16,13 +16,29 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from Carpark import views
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title="Parking Management API",
+      default_version='v1',
+      description="Parking Management API for booking bays",
+      terms_of_service="",
+      contact=openapi.Contact(email="rahul.parajuli27@gmail.com"),
+      license=openapi.License(name="BSD License"),
+   ),
+   public=True,
+   permission_classes=[permissions.AllowAny],
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls), #access admin panel - ID = rahul, password = rahul
-    path('booking', views.Bookinglist.as_view()), #get booking list and make booking
-    path('parkbay', views.Parkbaylist.as_view()), #get parkbay list
-    path('bookedbays', views.AllBookedBaylist.as_view()), #get all booked bays
-    path('availablebaylist', views.AllAvailableBaylist.as_view()), #get all available bays
-    path('date/bookinglist', views.BookedBayList.as_view()), #get all booked bays for a date
-    path("bookinglist/<str:date>/", views.BookedBayDates.as_view()), #get all booked bays for a date
+    path('booking', views.Bookinglist.as_view(), name='booking'), #get booking list and make booking
+    path('bookedbays', views.AllBookedBaylist.as_view(), name='bookedbays'), #get all booked bays
+    path('date/bookinglist', views.BookedBayList.as_view(), name= 'dateBookinglist'), #get all booked bays for a date
+    path("bookinglist/<str:date>/", views.BookedBayDates.as_view(), name='bookinglistDate'), #get all booked bays for a date
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc')
 ]

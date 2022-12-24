@@ -36,8 +36,8 @@ class ResponseHelper:
         return JsonResponse({'status': 409, 'message': message}, status=status.HTTP_409_CONFLICT)
 
     @staticmethod
-    def get_created_response(message):
-        return JsonResponse({'status': 201, 'message': message}, status=status.HTTP_201_CREATED)
+    def get_created_response( data, message):
+        return JsonResponse({'status': 201,'data':data, 'message': message}, status=status.HTTP_201_CREATED)
 
     @staticmethod
     def get_precondition_failed_response(message):

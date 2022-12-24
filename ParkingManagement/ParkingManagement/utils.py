@@ -1,4 +1,3 @@
-
 import re
 import logging
 from typing import Tuple
@@ -16,12 +15,12 @@ def saturate_date(input_date:str="") -> Tuple[str,datetime]:
     """
     def _map_month_by_num(month:str="") -> int:
         for month_id , month_values in month_abbreviations.items():
-            if month.strip() in month_values:
+            if month.capitalize().strip() in month_values:
                 return month_id
         return 00
     try :    
         year,month, date = 0000, 00 , 00
-        if re.search(r"([\d]{4}\-?[\d]{2}\-[\d]{2})", input_date):
+        if re.search(r"([\d]{4}\-?[\d]{2}\-[\d]{2})", input_date, flags= re.I):
             date_as_str = input_date
             date_as_datetime = datetime.strptime(date_as_str, "%Y-%m-%d")
             return date_as_str, date_as_datetime

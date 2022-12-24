@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "15607a17-65bb-4bd0-aaa7-28a9ed2497cd",
+		"name": "Parking_reservation_system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20865362"
+	},
+	"item": [
+		{
+			"name": "Book a parking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Rahul Parajuli\",\n    \"license_plate\": \"ABC-12\",\n    \"booking_for\": \"1st Jan 2023\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/booking",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the booking details",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the booked bays list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking list by date",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking list by date using URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/bookinglist/2022-12-25",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"bookinglist",
+						"2022-12-25"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
