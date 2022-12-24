@@ -76,7 +76,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"date\" : \"2022-12-25\"\n}",
+					"raw": "{\n    \"date\" : \"2023-02-01\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -103,14 +103,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/bookinglist/2022-12-25",
+					"raw": "localhost:8000/bookinglist/2023-02-01",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"bookinglist",
-						"2022-12-25"
+						"2023-02-01"
 					]
 				}
 			},

@@ -11,8 +11,8 @@ To get started with the API, you will need to set up a Python development enviro
 * Install Python **3.10** or later
 * Clone the repository:
 <code> git clone https://github.com/RahulParajuli/Parking_management_system.git<code>
-* Navigate to the project directory.
 * Install the required packages using the command: <code> pip install -r requirements.txt </code>
+* Navigate to the project directory.
 * To run the app try command <code>python manage.py runserver</code>
 * To run unit test apply the command <code>./manage.py test</code>
 * The **postman collection** for each API can be found in the root folder as *postman_collection.json*.
