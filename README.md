@@ -29,7 +29,7 @@ The API has multiple endpoints available for accessing the mentioned features an
 1. A customer can only book a singular park bay designated to a vehicle for a particular day. 
 **More than one reservations for the same vehicle cannot be made.** Vehicles are identified with the use of license plate numbers which is considered to be a universally unique constraint. However, booking for two different vehicles by the same customer or two different ones with a common name is possible in case the booking is being placed for a new vehicle.
 
-*Note: User who have booked are also stored in parkbay database to query  which user has booked a particular bay*
+*Note: Username of users who have booked for a bay are also stored in parkbay database to query from it*
 
 2. The booking endpoint <code>/booking</code> handles the reservation of the request for the following date formats. 
 i. 1st Jan 2023 (The date sample presented in the test case)
