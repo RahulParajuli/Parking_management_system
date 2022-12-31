@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "15607a17-65bb-4bd0-aaa7-28a9ed2497cd",
-		"name": "Parking_reservation_system",
+		"_postman_id": "497ac248-46a0-4500-b5cf-d2676e9705b5",
+		"name": "Parking_reservation_system Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20865362"
 	},
@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Alice\",\n    \"license_plate\": \"ABC-12\",\n    \"booking_for\": \"1st feb 2023\"\n}",
+					"raw": "{\n    \"name\": \"Rahul Parajuli\",\n    \"license_plate\": \"ABC-12\",\n    \"booking_for\": \"1st jan 2023\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,7 +76,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"date\" : \"2023-02-01\"\n}",
+					"raw": "{\n    \"date\" : \"2023-01-01\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -103,14 +103,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/bookinglist/2023-02-01",
+					"raw": "localhost:8000/bookinglist/2023-01-01",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"bookinglist",
-						"2023-02-01"
+						"2023-01-01"
 					]
 				}
 			},

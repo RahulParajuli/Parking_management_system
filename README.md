@@ -29,6 +29,8 @@ The API has multiple endpoints available for accessing the mentioned features an
 1. A customer can only book a singular park bay designated to a vehicle for a particular day. 
 **More than one reservations for the same vehicle cannot be made.** Vehicles are identified with the use of license plate numbers which is considered to be a universally unique constraint. However, booking for two different vehicles by the same customer or two different ones with a common name is possible in case the booking is being placed for a new vehicle.
 
+*Note: User who have booked are also stored in parkbay database to query  which user has booked a particular bay*
+
 2. The booking endpoint <code>/booking</code> handles the reservation of the request for the following date formats. 
 i. 1st Jan 2023 (The date sample presented in the test case)
 ii. 2023-01-01 (A standard date format) 
@@ -41,6 +43,8 @@ Meanwhile the date in the database is stored in as %Y-%M-%D datetime object.
 
 5. Due to the limitation in park bays, only 4 bookings can be made for a particular date.
 
+6. There are situational **edge case** where user can make booking for any future dates, to understand and overcome this situation the booking has been limited to a month for future dates.
+
 <b>Function II : Get The Reservations</b>
 
 1. Similar to the booking, the quering of the reservations is handled in the following date formats.
@@ -51,5 +55,6 @@ iii. The booking detail can be queried for a given date using two approaches
 * Posting date in /date/bookinglist route
 * By passing date in url /bookinglist/< date>
 <hr>
+
 
  *Note- The <code>db.sqlite3</code> file contains dummy data for the system which has been added with the consideration of providing initial aid for testing.*

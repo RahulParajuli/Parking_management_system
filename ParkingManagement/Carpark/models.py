@@ -17,6 +17,7 @@ class Parkbay(models.Model):
     bay_number = models.IntegerField(default=0)
     booked = models.BooleanField(default=False)
     date = models.DateField(default=datetime.today, blank=True)
+    customer = models.CharField(max_length=100, default="")
     
     def __str__(self):
         return "Bay " + str(self.bay_number)+  "     " + "Booking Date" + "   " + str(self.date)
